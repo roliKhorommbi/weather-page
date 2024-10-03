@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="plus.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/fc5adad0a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container border border-0 rounded shadow-lg" id="content">
+      <form class="row g-3 d-flex justify-content-center">
+        <div class="col-8">
+          <input
+            type="text"
+            class="form-control fs-3 text-secondary shadow border-2 rounded"
+            id="enterCity"
+            placeholder="Enter a city..."
+          />
+        </div>
+        <div class="col-auto">
+          <input
+            type="submit"
+            value="search"
+            class="form-control fs-3 shadow border-2 rounded"
+          />
+        </div>
+      </form>
+      <div class="weather-info d-flex my-5 border-bottom pb-5">
+        <p class="p-2 align-self-center fs-1 me-5" id="city">Tehran</p>
+
+        <p class="align-self-center fs-1 me-5" id="date">Friday 01:52</p>
+
+        <div class="p-2 d-flex flex-column align-items-center text-center">
+          <p>
+            <i class="mb-0"
+              ><img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+                alt=""
+                id="current-icon"
+            /></i>
+          </p>
+          <p class="my-0 text-secondary fs-5" id="description">Partly Cloudy</p>
+          <p class="my-0 text-secondary fs-5" id="humidity">Humidity 25%</p>
+        </div>
+        <p
+          class="current-temperature ms-auto p-2 align-self-center me-2"
+          id="temp"
+        >
+          🌤19
+        </p>
+        <p class="fs-4 align-self-center me-2">°C</p>
+      </div>
+      <div class="Daily-Forecast mt-2">
+        <p class="fs-1 ms-2 p-2">Daily Forecast</p>
+        <div class="d-flex justify-content-evenly text-center">
+          <div>
+            <i
+              ><img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/snow-day.png"
+                alt=""
+                id="firstDayIcon"
+            /></i>
+            <p class="text-secondary fs-3 align-self-center" id="firstDay">
+              Thu
+            </p>
+            <p class="fs-3 text-warning" id="first-max-temp">15°</p>
+            <p class="text-info fs-3 align-self-center" id="first-min-temp">
+              12°
+            </p>
+          </div>
+          <div>
+            <i
+              ><img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                alt=""
+                id="secondDayIcon"
+            /></i>
+            <p class="text-secondary fs-3 align-self-center" id="secondDay">
+              Fri
+            </p>
+            <p class="fs-3 text-warning" id="second-max-temp">21°</p>
+            <p class="text-info fs-3 align-self-center" id="second-min-temp">
+              17°
+            </p>
+          </div>
+          <div>
+            <i
+              ><img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                alt=""
+                id="thirdDayIcon"
+            /></i>
+            <p class="text-secondary fs-3" id="thirdDay">Sat</p>
+            <p class="fs-3 text-warning" id="third-max-temp">20°</p>
+            <p class="text-info fs-3" id="third-min-temp">18°</p>
+          </div>
+          <div>
+            <i
+              ><img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                alt=""
+                id="fourthDayIcon"
+            /></i>
+            <p class="text-secondary fs-3" id="fourthDay">Sun</p>
+            <p class="fs-3 text-warning" id="fourth-max-temp">20°</p>
+            <p class="text-info fs-3" id="fourth-min-temp">18°</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a
+        class="text-center d-block fs-5 text-secondary"
+        target="_blank"
+        href="https://github.com/Reyhane-Ghafarifar/weather-app"
+        >Coded by<a href="https://github.com/roliKhorommbi/weather-page">
+          KHOROMMBI R♐</a
+        >
+        >
+      </a>
+    </footer>
+    <script src="plus.js"></script>
+  </body>
+</html>
